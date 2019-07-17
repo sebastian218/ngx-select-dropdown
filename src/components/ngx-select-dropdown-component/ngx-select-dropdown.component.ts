@@ -176,13 +176,18 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
     // Arrow Down
     if ($event.keyCode === 40 && avaOpts.length > 0) {
       this.onArrowKeyDown();
-      avaOpts[this.focusedItemIndex].nativeElement.focus();
+      if(avaOpts[this.focusedItemIndex] != undefined){
+        avaOpts[this.focusedItemIndex].nativeElement.focus();
+      }
+      
       $event.preventDefault();
     }
     // Arrow Up
     if ($event.keyCode === 38 && avaOpts.length) {
       this.onArrowKeyUp();
-      avaOpts[this.focusedItemIndex].nativeElement.focus();
+      if(avaOpts[this.focusedItemIndex] != undefined){
+        avaOpts[this.focusedItemIndex].nativeElement.focus();
+      }
       $event.preventDefault();
     }
     // Enter
