@@ -178,7 +178,9 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
       this.onArrowKeyDown();
       if(avaOpts[this.focusedItemIndex] != undefined){
         avaOpts[this.focusedItemIndex].nativeElement.focus();
-      }
+      }else{
+        this.onArrowKeyUp();
+    }
       
       $event.preventDefault();
     }
@@ -187,7 +189,9 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
       this.onArrowKeyUp();
       if(avaOpts[this.focusedItemIndex] != undefined){
         avaOpts[this.focusedItemIndex].nativeElement.focus();
-      }
+      }else{
+        this.onArrowKeyDown();
+    }
       $event.preventDefault();
     }
     // Enter
