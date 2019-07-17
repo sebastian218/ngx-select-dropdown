@@ -195,10 +195,10 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
       $event.preventDefault();
     }
     // Enter
-    if ($event.keyCode === 13 && this.focusedItemIndex !== null) {
+    /* if ($event.keyCode === 13 && this.focusedItemIndex !== null) {
       this.selectItem(this.availableItems[this.focusedItemIndex], this.focusedItemIndex);
       return false;
-    }
+    } */
   }
 
   /**
