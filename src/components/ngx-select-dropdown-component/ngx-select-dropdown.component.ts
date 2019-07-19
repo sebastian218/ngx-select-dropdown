@@ -41,6 +41,8 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
    */
   @Input() public disabled: boolean;
 
+  @Input() public showSelectedItems: boolean;
+
   /**
    * change event when value changes to provide user to handle things in change event
    */

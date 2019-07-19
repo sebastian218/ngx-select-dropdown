@@ -9,7 +9,7 @@
             <label [ngClass]="{'active': searchText}">
                 <span class="nsdicon-search"></span> {{config.searchPlaceholder}}</label>
         </div>
-        <ul class="selected-items">
+        <ul class="selected-items" *ngIf="showSelectedItems">
             <li tabindex="-1" *ngFor="let selected of selectedItems;let i = index" (click)="deselectItem(selected,i)">
                 <span class="nsdicon-close"></span>
                 <span> {{selected[config.displayKey] || selected}}</span>
