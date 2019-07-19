@@ -197,7 +197,7 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
       $event.preventDefault();
     }
     // Enter
-    if ($event.keyCode === 13 && this.focusedItemIndex !== null) {
+   /*  if ($event.keyCode === 13 && this.focusedItemIndex !== null) {
       if(this.searchText){
         var filteredItems2 = this.availableItems.filter( item => item.selectOption.includes(this.searchText) );
         this.selectItem(filteredItems2[this.focusedItemIndex], this.focusedItemIndex);
@@ -206,7 +206,7 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
       }
       return false;
     }
-  }
+  } */
 
   /**
    * Component onInit
