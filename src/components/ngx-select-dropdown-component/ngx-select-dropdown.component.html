@@ -15,7 +15,7 @@
                 <span> {{selected[config.displayKey] || selected}}</span>
             </li>
         </ul>
-        <hr *ngIf="selectedItems.length > 0 && availableItems.length > 0" />
+        <hr *ngIf="selectedItems.length > 0 && availableItems.length > 0 && showSelectedItems " />
         <ul class="available-items">
             <li #availableOption *ngFor="let item of availableItems| filterBy: searchText : config.searchOnKey | limitTo : config.limitTo;let i = index"
                 tabindex="-1" [ngClass]="{'active': focusedItemIndex == i}" (click)="selectItem(item,i)">
