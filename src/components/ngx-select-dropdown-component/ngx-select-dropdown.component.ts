@@ -199,7 +199,7 @@ export class SelectDropDownComponent implements OnInit, OnChanges, AfterViewInit
     // Enter
     if ($event.keyCode === 13 && this.focusedItemIndex !== null) {
       if(this.searchText){
-        var filteredItems2 = this.availableItems.filter( x => x.selectOption.includes(this.searchText) );
+        var filteredItems2 = this.availableItems.filter( item => item.selectOption.includes(this.searchText) );
         this.selectItem(filteredItems2[this.focusedItemIndex], this.focusedItemIndex);
       }else{
         this.selectItem(this.availableItems[this.focusedItemIndex], this.focusedItemIndex);
